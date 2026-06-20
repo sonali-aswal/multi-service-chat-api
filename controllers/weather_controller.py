@@ -11,7 +11,8 @@ router = APIRouter()
 API_KEY = os.getenv("OPENWEATHER_API_KEY")
 
 
-@router.get("/api/weather")
+@router.get("/api/weather/{location}")
+# @router.get("/api/weather")
 def get_weather(location: str):
 
     if not API_KEY:
